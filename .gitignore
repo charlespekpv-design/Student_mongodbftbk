@@ -41,4 +41,8 @@ logs
 
 # Testing
 coverage/
+<<<<<<< HEAD
 .nyc_output/
+=======
+.nyc_output/
+>>>>>>> f19f9498f8c1938ddd55e05193b9932e79eebf38
