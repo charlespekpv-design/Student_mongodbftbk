@@ -5,6 +5,7 @@
 
 /* eslint-disable no-restricted-globals */
 import React, { useState, useEffect } from 'react';
+import './styles.css';  
 import { LogOut, User, Book, Clock, CheckCircle } from 'lucide-react';
 
 const API_URL = 'http://localhost:5000/api';
