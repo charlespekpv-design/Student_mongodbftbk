@@ -247,6 +247,20 @@ app.post('/api/courses', authMiddleware, async (req, res) => {
   }
 });
 
+app.delete('/api/courses/:id', authMiddleware, async (req, res) => {
+  try {
+    const course = await Course.findByIdAndDelete(req.params.id);
+    if (!course) return res.status(404).json({ error: 'Course not found' });
+    await User.updateMany(
+      { enrolledCourses: req.params.id },
+      { $pull: { enrolledCourses: req.params.id } }
+    );
+    res.json({ message: 'Course deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to delete course' });
+  }
+});
+
 setInterval(async () => {
   try {
     const result = await Session.updateMany(
