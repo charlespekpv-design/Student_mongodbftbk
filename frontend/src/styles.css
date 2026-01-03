@@ -124,7 +124,7 @@ nav.bg-indigo-600 {
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(10px);
+
 }
 
 nav button {
@@ -345,7 +345,7 @@ button {
 .bg-red-500 {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
-  backdrop-filter: blur(10px);
+  
 }
 
 /* ============================================
